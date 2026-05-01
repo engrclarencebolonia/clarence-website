@@ -155,7 +155,7 @@ export function ProjectDetail({ project }: Props) {
         {project.image && !isFlavorBuddy && (
           <Reveal className="mb-14">
             <div className="relative w-full rounded-2xl overflow-hidden border border-slate-200 dark:border-white/5 shadow-xl">
-              <Image src={img(project.image!)} alt={`${project.title} interface`} width={1200} height={675} className="w-full h-auto object-cover" />
+            <Image src={img(project.image!)} alt={`${project.title} interface`} width={1200} height={675} />
             </div>
           </Reveal>
         )}
