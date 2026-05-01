@@ -64,7 +64,7 @@ export function ProjectDetail({ project }: Props) {
       <div className={cn("relative py-24 sm:py-32 overflow-hidden bg-gradient-to-br", project.coverGradient)}>
         {project.image && (
           <div className="absolute inset-0" aria-hidden>
-            <Image src={img(project.image!)} alt="" fill className="object-cover object-top opacity-20" priority />
+            <Image src={img(project.image!)} alt="" fill className="object-cover object-top opacity-100" priority />
           </div>
         )}
         <div className="absolute inset-0 pointer-events-none" aria-hidden>
