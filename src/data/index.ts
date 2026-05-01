@@ -41,7 +41,7 @@ export const skills = [
       "Framer",
       "Adobe Photoshop",
       "Adobe Illustrator",
-      "Principle",
+
     ],
   },
   {
@@ -211,7 +211,7 @@ export const projects: Project[] = [
       { metric: "Error Recovery", value: "100%", description: "All error states have clear recovery paths" },
       { metric: "Screens Designed", value: "40+", description: "Full coverage across all user journeys" },
     ],
-    tools: ["Figma", "Maze", "Principle", "Adobe Illustrator"],
+    tools: ["Figma", "Adobe Photoshop", "Adobe Illustrator"],
     figmaLink: "https://www.figma.com/proto/hrmbt4piMS1sPlPzE2Dx0o/Clarence-Gio-Bolonia-s-Portfolio?node-id=736-78031&t=jMdIPcROf70WepeI-0&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=855%3A21509",
   },
   {
