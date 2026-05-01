@@ -191,13 +191,13 @@ export const projects: Project[] = [
     ],
     process: [
       "Workflow Analysis — Analyzed end-to-end financial transaction flows and identified friction points in OTP, navigation, and multi-step processes",
-      "Structuring the Experience — Reorganized navigation and information hierarchy to prioritize high-frequency actions and improve clarity during transactions",
+      "Structuring the Experience — Reorganized navigation and information hierarchy to prioritize high-frequency actions and improve clarity during transactions."
       "Interaction & Interface Design — Designed intuitive, consistent interfaces focused on reducing cognitive load and improving usability in critical financial actions",
       "Validation & Optimization — Collaborated with stakeholders and developers to ensure flows are clear, feasible, and aligned with system constraints",
       "Launch & Iteration — Refined designs based on feedback and improved flows to enhance speed, accuracy, and user confidence",
     ],
     solution:
-      "Redesigned the application with a focus on clarity, efficiency, and trust across core financial workflows. Key improvements: Streamlined Transaction Flows reducing multi-step processes, Improved Navigation Structure reorganizing features for faster access to high-frequency actions, Clearer Information Hierarchy prioritizing critical data during transactions, and a Consistent Design System standardizing components for better usability and scalability.",
+      "Redesigned the application with a focus on clarity, efficiency, and trust across core financial workflows. Key improvements: Streamlined Transaction Flows, reducing multi-step processes, Improved Navigation Structure, reorganizing features for faster access to high-frequency actions, Clearer Information Hierarchy, prioritizing critical data during transactions, and a Consistent Design System, standardizing components for better usability and scalability.",
     outcome:
       "The goal was to make financial actions faster, clearer, and more reliable — reducing risk of user error in high-stakes financial moments.",
     impactCards: [
