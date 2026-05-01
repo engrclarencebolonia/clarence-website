@@ -8,6 +8,7 @@ import { ArrowUpRight, Lock } from "lucide-react";
 import { projects } from "@/data";
 import { Reveal, StaggerChildren, staggerItem } from "@/components/ui/Reveal";
 import { cn } from "@/lib/utils";
+import { img } from "@/lib/imagePath";
 
 // WCAG AA compliant status badges (dark text on light bg)
 const statusStyles: Record<string, string> = {
@@ -72,7 +73,7 @@ export function ProjectsSection() {
                   <div className={cn("relative h-52 overflow-hidden", !project.image && `bg-gradient-to-br ${project.coverGradient}`)}>
                     {project.image
                       ? <>
-                          <Image src={project.image} alt={`${project.title} screenshot`} fill className="object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+                          <Image src={img(project.image!)} alt={`${project.title} screenshot`} fill className="object-cover object-top group-hover:scale-105 transition-transform duration-500" />
                           {/* WCAG-safe overlay: dark gradient ensures text is always readable */}
                           <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent" />
                         </>

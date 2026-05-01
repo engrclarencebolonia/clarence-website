@@ -5,6 +5,7 @@ import { Reveal, StaggerChildren, staggerItem } from "@/components/ui/Reveal";
 import { personalInfo } from "@/data";
 import { motion } from "framer-motion";
 import { MapPin, Briefcase, Layers } from "lucide-react";
+import { img } from "@/lib/imagePath";
 
 const philosophyPoints = [
   {
@@ -134,7 +135,7 @@ export function AboutSection() {
             <Reveal delay={0.25} className="mt-5 mb-2">
             <div className="relative h-56 w-full rounded-2xl overflow-hidden border border-slate-100 dark:border-white/5 shadow-card">
               <Image
-                src="/images/about-photo.jpg"
+                src={img("/images/about-photo.jpg")}
                 alt="Clarence at work"
                 fill
                 className="object-cover object-center"

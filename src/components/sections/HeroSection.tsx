@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowDown, Github, Figma, Mail } from "lucide-react";
 import { personalInfo } from "@/data";
+import { img } from "@/lib/imagePath";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -31,7 +32,7 @@ export function HeroSection() {
           {/* Profile photo */}
           <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7, delay: 0.3 }} className="order-first lg:order-last flex-shrink-0 lg:ml-auto relative">
             <div className="relative w-52 h-52 sm:w-64 sm:h-64 rounded-3xl overflow-hidden border-2 border-brand-200 dark:border-brand-800/40 shadow-2xl shadow-brand-500/10 bg-slate-900">
-              <Image src="/images/profile-hero.png" alt="Clarence Gio Bolonia — UI/UX Designer" fill className="object-cover object-top scale-110" priority />
+              <Image src={img("/images/profile-hero.png")} alt="Clarence Gio Bolonia — UI/UX Designer" fill className="object-cover object-top scale-110" priority />
             </div>
             <motion.div animate={{ y: [0, -6, 0] }} transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
               className="absolute -bottom-4 -right-4 bg-white dark:bg-surface-850 border border-brand-100 dark:border-brand-800/40 rounded-xl px-3 py-2 shadow-lg text-xs font-medium text-brand-700 dark:text-brand-300 flex items-center gap-1.5">

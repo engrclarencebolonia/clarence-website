@@ -9,6 +9,7 @@ import type { Project } from "@/data";
 import { projects } from "@/data";
 import { Reveal, StaggerChildren, staggerItem } from "@/components/ui/Reveal";
 import { cn } from "@/lib/utils";
+import { img } from "@/lib/imagePath";
 
 interface Props { project: Project }
 
@@ -34,7 +35,7 @@ function FlavorBuddyShowcase({ project }: { project: Project }) {
       <motion.div style={{ x: x1 }} className="flex gap-4 mb-4 px-6">
         {[project.image, project.mockupImage, project.image, project.mockupImage].filter(Boolean).map((src, i) => (
           <div key={i} className="flex-shrink-0 w-48 h-96 rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-            <Image src={src!} alt={`${project.title} screen ${i+1}`} width={192} height={384} className="w-full h-full object-cover object-top" />
+            <Image src={img(src!)} alt={`${project.title} screen ${i+1}`} width={192} height={384} className="w-full h-full object-cover object-top" />
           </div>
         ))}
       </motion.div>
@@ -42,7 +43,7 @@ function FlavorBuddyShowcase({ project }: { project: Project }) {
       <motion.div style={{ x: x2 }} className="flex gap-4 px-6">
         {[project.mockupImage, project.image, project.mockupImage, project.image].filter(Boolean).map((src, i) => (
           <div key={i} className="flex-shrink-0 w-48 h-96 rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-            <Image src={src!} alt={`${project.title} screen ${i+5}`} width={192} height={384} className="w-full h-full object-cover object-center" />
+            <Image src={img(src!)} alt={`${project.title} screen ${i+5}`} width={192} height={384} className="w-full h-full object-cover object-center" />
           </div>
         ))}
       </motion.div>
@@ -63,7 +64,7 @@ export function ProjectDetail({ project }: Props) {
       <div className={cn("relative py-24 sm:py-32 overflow-hidden bg-gradient-to-br", project.coverGradient)}>
         {project.image && (
           <div className="absolute inset-0" aria-hidden>
-            <Image src={project.image} alt="" fill className="object-cover object-top opacity-20" priority />
+            <Image src={img(project.image!)} alt="" fill className="object-cover object-top opacity-20" priority />
           </div>
         )}
         <div className="absolute inset-0 pointer-events-none" aria-hidden>
@@ -144,7 +145,7 @@ export function ProjectDetail({ project }: Props) {
         {project.image && !isFlavorBuddy && (
           <Reveal className="mb-14">
             <div className="relative w-full rounded-2xl overflow-hidden border border-slate-200 dark:border-white/5 shadow-xl">
-              <Image src={project.image} alt={`${project.title} interface`} width={1200} height={675} className="w-full h-auto object-cover" />
+              <Image src={img(project.image!)} alt={`${project.title} interface`} width={1200} height={675} className="w-full h-auto object-cover" />
             </div>
           </Reveal>
         )}
@@ -222,7 +223,7 @@ export function ProjectDetail({ project }: Props) {
         {isBPO && (
           <Reveal className="mb-14">
             <div className="relative w-full rounded-2xl overflow-hidden border border-slate-200 dark:border-white/5 shadow-xl">
-              <Image src="/images/b2b-bpo-case-study.png" alt="B2B BPO Platform design system" width={1200} height={800} className="w-full h-auto object-cover" />
+              <Image src={img("/images/b2b-bpo-case-study.png")} alt="B2B BPO Platform design system" width={1200} height={800} className="w-full h-auto object-cover" />
             </div>
           </Reveal>
         )}
@@ -231,7 +232,7 @@ export function ProjectDetail({ project }: Props) {
         {project.id === "ml-wallet" && (
           <Reveal className="mb-14">
             <div className="relative w-full rounded-2xl overflow-hidden border border-slate-200 dark:border-white/5 shadow-xl">
-              <Image src="/images/ml-wallet-case-study.png" alt="ML Wallet case study screens" width={1200} height={800} className="w-full h-auto object-cover" />
+              <Image src={img("/images/ml-wallet-case-study.png")} alt="ML Wallet case study screens" width={1200} height={800} className="w-full h-auto object-cover" />
             </div>
           </Reveal>
         )}
