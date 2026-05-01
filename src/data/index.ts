@@ -42,8 +42,6 @@ export const skills = [
       "Adobe Photoshop",
       "Adobe Illustrator",
       "Principle",
-      "Zeplin",
-      "Maze",
     ],
   },
   {
@@ -161,7 +159,7 @@ export const projects: Project[] = [
       { metric: "Data Sources Unified", value: "5→1", description: "Consolidated fragmented systems" },
       { metric: "Design Stages", value: "4", description: "Shipped iteratively over 1.5 years" },
     ],
-    tools: ["Figma", "FigJam", "Maze", "Zeplin", "Notion"],
+    tools: ["Figma", "FigJam", "FigmaMale", "Jira", "Confluence", "Gemini", "ChatGPT" "Slack"],
     nda: true,
   },
   {
