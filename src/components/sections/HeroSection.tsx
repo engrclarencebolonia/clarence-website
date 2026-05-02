@@ -52,16 +52,15 @@ export function HeroSection() {
             <motion.div variants={itemVariants}>
               <h1 className="font-display font-bold leading-tight mb-2">
                 <span className="block text-5xl sm:text-6xl md:text-7xl text-slate-900 dark:text-white">Designing clarity</span>
-                <span className="block text-5xl sm:text-6xl md:text-7xl"><span className="gradient-text">from complexity.</span></span>
+                <span className="block text-5xl sm:text-6xl md:text-7xl">from complexity.</span>
               </h1>
             </motion.div>
 
             <motion.p variants={itemVariants} className="mt-6 text-lg sm:text-xl text-slate-600 dark:text-slate-400 max-w-xl leading-relaxed font-body">
-              I&rsquo;m <span className="font-semibold text-slate-900 dark:text-white">Clarence Gio Bolonia</span> — a UI/UX & Product Designer with 4+ years building{" "}
+              I&rsquo;m <span className="font-semibold text-slate-900 dark:text-white">Clarence Gio Bolonia</span> — a UI/UX & Product Designer with 5 years building{" "}
               <span className="text-brand-600 dark:text-brand-400 font-medium">Fintech</span> and{" "}
               <span className="text-brand-600 dark:text-brand-400 font-medium">B2B SaaS</span> products. I design with engineering feasibility in mind.
             </motion.p>
-
             <motion.div variants={itemVariants} className="flex flex-wrap gap-6 mt-8">
               {personalInfo.stats.map((stat) => (
                 <div key={stat.label} className="flex flex-col">

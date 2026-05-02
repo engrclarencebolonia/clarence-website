@@ -159,7 +159,7 @@ export const projects: Project[] = [
       { metric: "Data Sources Unified", value: "5→1", description: "Consolidated fragmented systems" },
       { metric: "Design Stages", value: "4", description: "Shipped iteratively over 1.5 years" },
     ],
-    tools: ["Figma", "FigJam", "FigmaMale", "Jira", "Confluence", "Gemini", "ChatGPT" "Slack"],
+    tools: ["Figma", "FigJam", "FigmaMale", "Jira", "Confluence", "Gemini", "ChatGPT", "Slack"],
     nda: true,
   },
   {
@@ -191,7 +191,7 @@ export const projects: Project[] = [
     ],
     process: [
       "Workflow Analysis — Analyzed end-to-end financial transaction flows and identified friction points in OTP, navigation, and multi-step processes",
-      "Structuring the Experience — Reorganized navigation and information hierarchy to prioritize high-frequency actions and improve clarity during transactions."
+      "Structuring the Experience — Reorganized navigation and information hierarchy to prioritize high-frequency actions and improve clarity during transactions.",
       "Interaction & Interface Design — Designed intuitive, consistent interfaces focused on reducing cognitive load and improving usability in critical financial actions",
       "Validation & Optimization — Collaborated with stakeholders and developers to ensure flows are clear, feasible, and aligned with system constraints",
       "Launch & Iteration — Refined designs based on feedback and improved flows to enhance speed, accuracy, and user confidence",
