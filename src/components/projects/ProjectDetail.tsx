@@ -125,16 +125,17 @@ export function ProjectDetail({ project }: Props) {
               </div>
             )}
           </motion.div>
+{/* 
+               <Divider /> */}
 
-          {/* Outcome metrics */}
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3">
-            {project.outcomes.map((o) => (
-              <div key={o.metric} className="p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/15">
-                <p className="text-2xl font-display font-bold text-white leading-none mb-1">{o.value}</p>
-                <p className="text-xs text-white/60">{o.metric}</p>
-              </div>
-            ))}
-          </motion.div>
+        {/* Hero project image */}
+        {/* {project.image && !isFlavorBuddy && (
+          <Reveal className="mb-14">
+            <div className="relative w-full rounded-2xl overflow-hidden border border-slate-200 dark:border-white/5 shadow-xl">
+            <Image src={img(project.image!)} alt={`${project.title} interface`} width={1200} height={675} />
+            </div>
+          </Reveal>
+        )} */}
         </div>
       </div>
 
@@ -149,16 +150,7 @@ export function ProjectDetail({ project }: Props) {
           </section>
         </Reveal>
 
-        <Divider />
-
-        {/* Hero project image */}
-        {project.image && !isFlavorBuddy && (
-          <Reveal className="mb-14">
-            <div className="relative w-full rounded-2xl overflow-hidden border border-slate-200 dark:border-white/5 shadow-xl">
-            <Image src={img(project.image!)} alt={`${project.title} interface`} width={1200} height={675} />
-            </div>
-          </Reveal>
-        )}
+ <Divider /> 
 
         {/* FlavorBuddy: Mobbin-style scroll showcase */}
         {isFlavorBuddy && <FlavorBuddyShowcase project={project} />}

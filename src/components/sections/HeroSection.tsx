@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowDown, Github, Figma, Mail } from "lucide-react";
+import { ArrowDown, Github, Figma, Mail, Linkedin } from "lucide-react";
 import { personalInfo } from "@/data";
 import { img } from "@/lib/imagePath";
 
@@ -85,6 +85,7 @@ export function HeroSection() {
               <div className="flex items-center gap-2">
                 {[
                   { href: personalInfo.github, icon: <Github size={16} />, label: "GitHub" },
+                  { href: personalInfo.linkedin, icon: <Linkedin size={16} />, label: "Linkedin" },
                   { href: personalInfo.figma, icon: <Figma size={16} />, label: "Figma" },
                   { href: `mailto:${personalInfo.email}`, icon: <Mail size={16} />, label: "Email" },
                 ].map(({ href, icon, label }) => (
