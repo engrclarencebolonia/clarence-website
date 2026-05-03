@@ -31,12 +31,14 @@ const categoryEmoji: Record<string, string> = {
 };
 
 const toolLogos: Record<string, string> = {
-  Figma: "🖼",
-  React: "⚛️",
-  "Next.js": "▲",
-  Firebase: "🔥",
-  "Tailwind CSS": "🌊",
-  "Adobe XD": "✨",
+  Figma: "🔥",
+  "Product Design": "⭐",
+  "UX Strategy": "⭐",
+  "Design Systems in Figma (components, tokens, scalability)": "⭐",
+   "B2B SaaS Platforms": "⭐",
+      "Problem Framing & Solution Mapping": "⭐",
+      "Data-informed Design": "⭐",
+             "Product Discovery & Research":"⭐",
 };
 
 export function SkillsSection() {
@@ -126,27 +128,27 @@ export function SkillsSection() {
             {
               step: "01",
               title: "Workflow & Data Analysis",
-              desc: "Map sources, understand inconsistencies and friction",
+              desc: "Uncover user pain points and data-driven insights to define the problem",
             },
             {
               step: "02",
               title: "Structuring the System",
-              desc: "Unify information architecture and design tokens",
+              desc: "Unify workflows, data, and tools into a scalable system aligned with user, business, and engineering requirements",
             },
             {
               step: "03",
-              title: "Interface Design",
-              desc: "Clarity, hierarchy, usability — all states covered",
+              title: "Interaction & Interface Design",
+              desc: "Design clear, accessible interfaces that support decisions and reduce cognitive load",
             },
             {
               step: "04",
-              title: "Validation & Testing",
-              desc: "Stakeholder review, usability tests, iteration",
+              title: "Validation & Optimization",
+              desc: "Validate with stakeholders and real usage to ensure usability, iteration, and feasibility",
             },
             {
               step: "05",
               title: "Launch & Iteration",
-              desc: "Ship, measure, and build the feedback loop",
+              desc: "Ship, measure impact, and continuously refine based on feedback and usage",
             },
           ].map((phase, i) => (
             <motion.div

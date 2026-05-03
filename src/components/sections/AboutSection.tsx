@@ -9,25 +9,25 @@ import { img } from "@/lib/imagePath";
 
 const philosophyPoints = [
   {
-    icon: "🎯",
+    icon: "",
     title: "System-first thinking",
     description:
       "Every component exists in a system. I design tokens, not one-offs. Consistency at scale is a design decision.",
   },
   {
-    icon: "🧠",
+    icon: "",
     title: "Cognitive load reduction",
     description:
       "Less visual noise, more decision support. Good design helps users act faster with more confidence.",
   },
   {
-    icon: "🔧",
+    icon: "",
     title: "Engineering feasibility",
     description:
       "Coming from a frontend background, I design knowing how it will be built. No handoff surprises.",
   },
   {
-    icon: "📊",
+    icon: "",
     title: "Data-driven clarity",
     description:
       "I surface key metrics first, with clear drill-down paths. Dashboards must feel authoritative, not decorative.",
@@ -132,7 +132,7 @@ export function AboutSection() {
             </StaggerChildren>
 
             {/* Stats */}
-            <Reveal delay={0.25} className="mt-5 mb-2">
+            {/* <Reveal delay={0.25} className="mt-5 mb-2">
             <div className="relative h-56 w-full rounded-2xl overflow-hidden border border-slate-100 dark:border-white/5 shadow-card">
               <Image
                 src={img("/images/about-photo.jpg")}
@@ -145,7 +145,7 @@ export function AboutSection() {
                 Bacoor, Cavite, Philippines
               </div>
             </div>
-          </Reveal>
+          </Reveal> */}
 
           <Reveal delay={0.3} className="mt-6">
               <div className="p-5 rounded-2xl bg-gradient-to-br from-brand-50 to-brand-100/50 dark:from-brand-950/30 dark:to-brand-900/20 border border-brand-100 dark:border-brand-800/30">

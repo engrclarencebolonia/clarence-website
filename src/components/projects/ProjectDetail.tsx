@@ -233,7 +233,7 @@ export function ProjectDetail({ project }: Props) {
         {isBPO && (
           <Reveal className="mb-14">
             <div className="relative w-full rounded-2xl overflow-hidden border border-slate-200 dark:border-white/5 shadow-xl">
-              <Image src={img("/images/b2b-bpo-case-study.png")} alt="B2B BPO Platform design system" width={1200} height={800} className="w-full h-auto object-cover" />
+              <Image src={img("/images/sherpacx.png")} alt="B2B BPO Platform design system" width={1200} height={800} className="w-full h-auto object-cover" />
             </div>
           </Reveal>
         )}
@@ -242,7 +242,7 @@ export function ProjectDetail({ project }: Props) {
         {project.id === "ml-wallet" && (
           <Reveal className="mb-14">
             <div className="relative w-full rounded-2xl overflow-hidden border border-slate-200 dark:border-white/5 shadow-xl">
-              <Image src={img("/images/ml-wallet-case-study.png")} alt="ML Wallet case study screens" width={1200} height={800} className="w-full h-auto object-cover" />
+              <Image src={img("/images/ml_wallet.png")} alt="ML Wallet case study screens" width={1200} height={800} className="w-full h-auto object-cover" />
             </div>
           </Reveal>
         )}
@@ -259,7 +259,7 @@ export function ProjectDetail({ project }: Props) {
             {project.impactCards && (
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
                 {project.impactCards.map((card, i) => (
-                  <div key={i} className="p-4 rounded-xl border text-sm font-medium leading-snug" style={{ background: project.color + "15", borderColor: project.color + "40", color: project.color }}>
+                  <div key={i} className="p-4 rounded-xl border text-sm font-medium leading-snug" style={{ background: project.color + "15", borderColor: project.color + "40" }}>
                     {card}
                   </div>
                 ))}

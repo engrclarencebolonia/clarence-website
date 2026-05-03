@@ -2,7 +2,7 @@
 
 import { Reveal } from "@/components/ui/Reveal";
 import { personalInfo } from "@/data";
-import { Mail, Github, Figma, ArrowUpRight, Copy, Check } from "lucide-react";
+import { Mail, Github, Figma, ArrowUpRight, Copy, Check, Linkedin } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
@@ -94,10 +94,16 @@ export function ContactSection() {
                   label: "GitHub",
                 },
                 {
+                  href: personalInfo.linkedin,
+                  icon: <Linkedin size={18} />,
+                  label: "LinkedIn",
+                },
+                {
                   href: personalInfo.figma,
                   icon: <Figma size={18} />,
                   label: "Figma Portfolio",
                 },
+              
               ].map(({ href, icon, label }) => (
                 <a
                   key={label}

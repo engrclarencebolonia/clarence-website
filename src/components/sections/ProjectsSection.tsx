@@ -36,14 +36,14 @@ export function ProjectsSection() {
               </h2>
             </div>
             <p className="text-sm text-slate-500 dark:text-slate-400 max-w-xs sm:text-right">
-              {projects.length} projects across Fintech, SaaS, and Mobile
+              {projects.length} projects across Fintech, SaaS, and Additional Works
             </p>
           </div>
         </Reveal>
 
         <Reveal delay={0.1} className="mb-10">
           <div className="flex flex-wrap gap-2" role="group" aria-label="Filter projects by tag">
-            {["All", "Product Design", "Mobile Design", "Design System", "Fintech", "B2B SaaS"].map((tag) => (
+            {["All","B2B SaaS", "Fintech", "Mobile Apps", "Additional Works"].map((tag) => (
               <button key={tag} onClick={() => setActiveTag(tag)} aria-pressed={activeTag === tag}
                 className={cn(
                   "px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 border",
