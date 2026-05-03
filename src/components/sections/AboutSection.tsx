@@ -66,7 +66,7 @@ export function AboutSection() {
                   { icon: <MapPin size={14} />, text: personalInfo.location },
                   {
                     icon: <Briefcase size={14} />,
-                    text: "4+ years · 30+ projects",
+                    text: "5 years · 30+ projects",
                   },
                   {
                     icon: <Layers size={14} />,
@@ -151,7 +151,7 @@ export function AboutSection() {
               <div className="p-5 rounded-2xl bg-gradient-to-br from-brand-50 to-brand-100/50 dark:from-brand-950/30 dark:to-brand-900/20 border border-brand-100 dark:border-brand-800/30">
                 <div className="grid grid-cols-3 gap-4">
                   {[
-                    { val: "4+", lab: "Years" },
+                    { val: "5", lab: "Years" },
                     { val: "30+", lab: "Projects" },
                     { val: "3", lab: "Design Systems" },
                   ].map(({ val, lab }) => (

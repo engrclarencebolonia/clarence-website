@@ -2,19 +2,18 @@ export const personalInfo = {
   name: "Clarence Gio Bolonia",
   title: "UI/UX & Product Designer",
   tagline: "Designing clarity from complexity.",
-  bio: "I'm a UI/UX and Product Designer with 4+ years of experience building complex Fintech and B2B SaaS platforms. I come from a frontend development background — which means I design with engineering feasibility in mind, always.",
+  bio: "I'm a UI/UX and Product Designer with 5 years of experience building complex Fintech and B2B SaaS platforms. I come from a frontend development background — which means I design with engineering feasibility in mind, always.",
   bioExtended:
     "My work lives at the intersection of data density and cognitive ease. I don't chase trends — I solve operational friction. Every design decision I make has intent and usability behind it.",
   location: "Bacoor, Cavite, Philippines",
   email: "engrclarencebolonia08@gmail.com",
   github: "https://github.com/engrclarencebolonia",
-  figma:
-    "https://www.figma.com/design/hrmbt4piMS1sPlPzE2Dx0o/Clarence-Gio-Bolonia-s-Portfolio",
-  wix: "https://engrclarencebolonia.wixsite.com/profile/my-projects",
+  linkedin: "https://www.linkedin.com/in/engrclarencebolonia08/",
+  figma: "https://www.figma.com/design/hrmbt4piMS1sPlPzE2Dx0o/Clarence-Gio-Bolonia-s-Portfolio",
   stats: [
-    { label: "Years Experience", value: "4+" },
+    { label: "Years Experience", value: "5" },
     { label: "Projects Delivered", value: "30+" },
-    { label: "Industries", value: "Fintech, SaaS, Mobile" },
+    { label: "Industries", value: "Fintech, B2B SaaS, E-Commerce" },
     { label: "Design Systems Built", value: "3" },
   ],
 };
@@ -23,27 +22,33 @@ export const skills = [
   {
     category: "Design",
     items: [
-      "UI/UX Design",
-      "Product Design",
-      "Design Systems",
-      "Interaction Design",
+      "⭐ Product Design",
+      "⭐ UX Strategy",
+      "⭐ Design Systems in Figma",
       "Information Architecture",
+      "UI/UX Design",
       "User Research",
       "Prototyping",
       "Wireframing",
+      "Interaction Design",
     ],
   },
   {
     category: "Tools",
     items: [
-      "Figma",
-      "Adobe XD",
-      "Framer",
+      "🔥 Figma",
       "Adobe Photoshop",
       "Adobe Illustrator",
-      "Principle",
-      "Zeplin",
-      "Maze",
+      "AI-Assisted Design & Workflow",
+      "Rive",
+      "Adobe XD",
+      "Framer",
+      "Webflow",
+      "Jira",
+      "Confluence",
+      "Loom",
+      "Notion",
+      "Slack",
     ],
   },
   {
@@ -62,8 +67,13 @@ export const skills = [
   {
     category: "Specializations",
     items: [
-      "B2B SaaS Platforms",
+      "⭐ B2B SaaS Platforms",
+      "⭐ Problem Framing & Solution Mapping",
+      "⭐ Data-informed Design",
+      "⭐ Product Discovery & Research",
       "Fintech & Payments",
+      "Design Systems & Scalability",
+      "Presentation & Communication",
       "Data Dashboards",
       "Mobile Apps (Android)",
       "BPO / Ops Tools",
@@ -73,12 +83,6 @@ export const skills = [
     ],
   },
 ];
-
-export interface CaseStudySection {
-  heading: string;
-  body: string;
-  bullets?: string[];
-}
 
 export interface Project {
   id: string;
@@ -117,9 +121,9 @@ export const projects: Project[] = [
     title: "B2B SaaS BPO Platform",
     subtitle: "All-in-One BPO Operations & Performance Platform",
     type: "B2B SaaS · Web Platform",
-    year: "2023–2024",
+    year: "2024–2026",
     status: "In Progress",
-    tags: ["Product Design", "Design System", "B2B SaaS", "Data Dashboard"],
+    tags: ["B2B SaaS", "Product Design", "Design System"],
     color: "#4a2ff1",
     accentColor: "#8077ff",
     textColor: "#ffffff",
@@ -129,8 +133,8 @@ export const projects: Project[] = [
     overview:
       "Led the design of dashboards and operational tools for a B2B SaaS BPO platform, focusing on improving data clarity, reducing workflow friction, and enabling faster, more confident decision-making.",
     client: "Compass Experience Labs",
-    role: "UI Designer — Product / UI/UX Design Focus",
-    duration: "1.5 years",
+    role: "UI/UX Designer (Product Focus)",
+    duration: "1.6 years",
     problem:
       "The initial objective was to design a more gamified and data-driven system aligned with operational workflows — helping teams stay engaged while tracking performance effectively. However, during discovery, deeper issues emerged. Operational data was sourced from multiple systems, including CRMs and manual Excel reports, with inconsistent formats and validation.",
     problemBullets: [
@@ -140,11 +144,11 @@ export const projects: Project[] = [
       "Limited trust in dashboards due to data inaccuracies",
     ],
     process: [
-      "Workflow & Data Analysis — Analyzed data sources, workflows, and inconsistencies across systems to identify fragmentation and reliability issues",
-      "Structuring the System — Designed a scalable system structure that unifies tasks, communication, and analytics into a cohesive workflow",
-      "Interaction & Interface Design — Created a unified interface that prioritizes clarity, hierarchy, usability, and efficient decision-making",
-      "Validation & Optimization — Validated and refined solutions through collaboration with stakeholders and developers, ensuring alignment with business and technical requirements",
-      "Launch & Iteration — Continuously improved workflows based on feedback, usage patterns, and evolving business requirements",
+      "Workflow & Data Analysis — Identified fragmentation across multiple CRMs and reports, causing unreliable data and high cognitive load for teams",
+      "Structuring the System — Redesigned the system architecture to unify workflows, data, and communication into a single, scalable structure",
+      "Interaction & Interface Design — Simplified complex workflows into a clear, intuitive interface that reduces cognitive load and supports decision-making",
+      "Validation & Optimization — Collaborated with stakeholders and developers to validate solutions and ensure alignment with business and technical constraints",
+      "Launch & Iteration — Continuously refined the product based on usage patterns, feedback, and evolving operational needs",
     ],
     solution:
       "Rather than focusing solely on UI improvements or gamification, I redefined the approach to address the core system issues identified during discovery. The solution focused on Data Consolidation & Standardization, Workflow Alignment, Structured Data Presentation surfacing key metrics first with clear drill-down paths, and Gamification with Purpose — integrating engagement elements without compromising clarity.",
@@ -156,12 +160,12 @@ export const projects: Project[] = [
       "Achieved strong early adoption, indicating high usability and product fit",
     ],
     outcomes: [
-      { metric: "Workflow Efficiency", value: "↑", description: "Reduced tool switching and fragmented workflows" },
-      { metric: "Task Completion", value: "↑", description: "Simplified user flows reduced friction" },
-      { metric: "Data Sources Unified", value: "5→1", description: "Consolidated fragmented systems" },
-      { metric: "Design Stages", value: "4", description: "Shipped iteratively over 1.5 years" },
+      { metric: "Product Discoveries", value: "20+", description: "Uncovered gaps in fragmented data and workflows" },
+      { metric: "Shipped to Production", value: "75%", description: "Simplified user flows reduced friction" },
+      { metric: "Product Evolution", value: "Beta → 2.0", description: "Improved system clarity and workflow efficiency" },
+      { metric: "Unified & Automated", value: "5 → 1", description: "Reduced tool switching and fragmented workflows" },
     ],
-    tools: ["Figma", "FigJam", "Maze", "Zeplin", "Notion"],
+    tools: ["Figma", "FigJam", "Adobe Photoshop", "Adobe Illustrator", "Rive", "Jira", "Confluence", "Gemini AI", "ChatGPT AI", "Slack", "Loom"],
     nda: true,
   },
   {
@@ -171,7 +175,7 @@ export const projects: Project[] = [
     type: "Fintech · Mobile App",
     year: "2022",
     status: "Completed",
-    tags: ["Mobile Design", "Fintech", "UX Research", "Payment Flows"],
+    tags: ["Fintech", "Mobile Apps"],
     color: "#b91c1c",
     accentColor: "#ef4444",
     textColor: "#ffffff",
@@ -208,12 +212,12 @@ export const projects: Project[] = [
       "Enhanced usability and navigation, enabling faster and more confident transactions",
     ],
     outcomes: [
-      { metric: "Flow Reduction", value: "3 Steps", description: "Core transactions in 3 taps or fewer" },
-      { metric: "Trust Score", value: "+34%", description: "User trust rating in usability tests" },
-      { metric: "Error Recovery", value: "100%", description: "All error states have clear recovery paths" },
-      { metric: "Screens Designed", value: "40+", description: "Full coverage across all user journeys" },
+      { metric: "Product Discoveries", value: "8+", description: "Identified opportunities across financial workflows" },
+      { metric: "Industry Benchmark", value: "2022", description: "Anticipated design patterns ahead of competitors" },
+      { metric: "Flow Simplification", value: "3 → 2", description: "Reduced transaction steps by combining redundant actions" },
+      { metric: "Screens Designed", value: "80+", description: "End-to-end coverage of core financial workflows" },
     ],
-    tools: ["Figma", "Maze", "Principle", "Adobe Illustrator"],
+    tools: ["Figma", "Adobe Photoshop", "Adobe Illustrator", "Jira", "Confluence", "Microsoft Office", "MS Teams"],
     figmaLink: "https://www.figma.com/proto/hrmbt4piMS1sPlPzE2Dx0o/Clarence-Gio-Bolonia-s-Portfolio?node-id=736-78031&t=jMdIPcROf70WepeI-0&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=855%3A21509",
   },
   {
@@ -223,7 +227,7 @@ export const projects: Project[] = [
     type: "Productivity · Android App",
     year: "2023",
     status: "Live",
-    tags: ["Android Design", "Collaboration Tool", "Design + Dev", "Firebase"],
+    tags: ["Mobile Apps", "Collaboration Tool"],
     color: "#1d00e6",
     accentColor: "#a78bfa",
     textColor: "#ffffff",
@@ -261,7 +265,7 @@ export const projects: Project[] = [
     type: "Consumer · Android App",
     year: "2022–2023",
     status: "Live",
-    tags: ["Consumer App", "Android", "Personal Productivity", "Published"],
+    tags: ["Mobile Apps", "Android"],
     color: "#3730a3",
     accentColor: "#c084fc",
     textColor: "#ffffff",
@@ -278,7 +282,7 @@ export const projects: Project[] = [
       "Created a dark, moody aesthetic system — deep indigo + soft purple with subtle gradients",
       "Designed the core journal loop: New Entry → Tag → Save → Reflect",
       "Built with Firebase Auth (Google Sign-In), Realtime DB, Firestore, Storage, and Analytics",
-      "Shipped 5 production releases (versionCode 5) with iterative improvements",
+      "Shipped 5 production releases with iterative improvements based on usage analytics",
     ],
     solution:
       "A beautifully calm dark-mode Android journal app with frictionless entry creation, media attachment support, dream tagging, and a Google-authenticated sync — so your journal follows you across devices.",
@@ -300,7 +304,7 @@ export const projects: Project[] = [
     type: "Food & Commerce · Android App",
     year: "2023",
     status: "Completed",
-    tags: ["E-Commerce", "Android", "Maps Integration", "Consumer App"],
+    tags: ["E-Commerce", "Mobile Apps"],
     color: "#c2170a",
     accentColor: "#fb7185",
     textColor: "#ffffff",

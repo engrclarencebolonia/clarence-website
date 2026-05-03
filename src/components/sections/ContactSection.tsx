@@ -2,7 +2,7 @@
 
 import { Reveal } from "@/components/ui/Reveal";
 import { personalInfo } from "@/data";
-import { Mail, Github, Figma, ArrowUpRight, Copy, Check } from "lucide-react";
+import { Mail, Github, Figma, Linkedin, ArrowUpRight, Copy, Check } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
@@ -23,15 +23,14 @@ export function ContactSection() {
             <p className="text-xs font-semibold uppercase tracking-widest text-brand-600 dark:text-brand-400 mb-3">
               Get In Touch
             </p>
-            <h2 className="text-display-sm text-3xl sm:text-4xl text-slate-900 dark:text-white mb-5">
+            <h2 className="font-display font-bold text-3xl sm:text-4xl text-slate-900 dark:text-white mb-5 leading-tight">
               Let&rsquo;s build something{" "}
               <span className="gradient-text">meaningful together.</span>
             </h2>
             <p className="text-base text-slate-600 dark:text-slate-400 leading-relaxed mb-10">
-              I&rsquo;m currently available for freelance projects, full-time
-              roles, and design consultations. If you have a complex problem
-              that needs clear, scalable design — I&rsquo;d love to hear from
-              you.
+              I&rsquo;m currently available for freelance projects, full-time roles, and design
+              consultations. If you have a complex problem that needs clear, scalable design — I&rsquo;d
+              love to hear from you.
             </p>
           </Reveal>
 
@@ -43,10 +42,7 @@ export function ContactSection() {
               >
                 <Mail size={16} />
                 Send an Email
-                <ArrowUpRight
-                  size={14}
-                  className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
-                />
+                <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </a>
               <button
                 onClick={copyEmail}
@@ -58,46 +54,24 @@ export function ContactSection() {
                 )}
                 aria-label="Copy email address"
               >
-                {copied ? (
-                  <>
-                    <Check size={15} /> Copied!
-                  </>
-                ) : (
-                  <>
-                    <Copy size={15} /> Copy Email
-                  </>
-                )}
+                {copied ? <><Check size={15} /> Copied!</> : <><Copy size={15} /> Copy Email</>}
               </button>
             </div>
           </Reveal>
 
           <Reveal delay={0.15}>
-            {/* Email display */}
             <div className="p-4 rounded-2xl bg-slate-50 dark:bg-surface-850 border border-slate-100 dark:border-white/5 mb-8">
-              <p className="font-mono text-sm text-slate-600 dark:text-slate-400">
-                {personalInfo.email}
-              </p>
+              <p className="font-mono text-sm text-slate-600 dark:text-slate-400">{personalInfo.email}</p>
             </div>
           </Reveal>
 
           <Reveal delay={0.2}>
-            <div className="flex items-center justify-center gap-4">
-              <span className="text-xs text-slate-400 dark:text-slate-600 uppercase tracking-widest">
-                Or find me on
-              </span>
-            </div>
-            <div className="flex items-center justify-center gap-3 mt-4">
+            <p className="text-xs text-slate-400 dark:text-slate-600 uppercase tracking-widest mb-4">Or find me on</p>
+            <div className="flex flex-wrap items-center justify-center gap-3">
               {[
-                {
-                  href: personalInfo.github,
-                  icon: <Github size={18} />,
-                  label: "GitHub",
-                },
-                {
-                  href: personalInfo.figma,
-                  icon: <Figma size={18} />,
-                  label: "Figma Portfolio",
-                },
+                { href: personalInfo.github, icon: <Github size={16} />, label: "GitHub" },
+                { href: personalInfo.linkedin, icon: <Linkedin size={16} />, label: "LinkedIn" },
+                { href: personalInfo.figma, icon: <Figma size={16} />, label: "Figma Portfolio" },
               ].map(({ href, icon, label }) => (
                 <a
                   key={label}
@@ -108,10 +82,7 @@ export function ContactSection() {
                 >
                   {icon}
                   {label}
-                  <ArrowUpRight
-                    size={13}
-                    className="opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
-                  />
+                  <ArrowUpRight size={13} className="opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
                 </a>
               ))}
             </div>

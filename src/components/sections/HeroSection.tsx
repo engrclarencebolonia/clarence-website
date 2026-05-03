@@ -57,7 +57,7 @@ export function HeroSection() {
             </motion.div>
 
             <motion.p variants={itemVariants} className="mt-6 text-lg sm:text-xl text-slate-600 dark:text-slate-400 max-w-xl leading-relaxed font-body">
-              I&rsquo;m <span className="font-semibold text-slate-900 dark:text-white">Clarence Gio Bolonia</span> — a UI/UX & Product Designer with 4+ years building{" "}
+              I&rsquo;m <span className="font-semibold text-slate-900 dark:text-white">Clarence Gio Bolonia</span> — a UI/UX & Product Designer with 5 years building{" "}
               <span className="text-brand-600 dark:text-brand-400 font-medium">Fintech</span> and{" "}
               <span className="text-brand-600 dark:text-brand-400 font-medium">B2B SaaS</span> products. I design with engineering feasibility in mind.
             </motion.p>
