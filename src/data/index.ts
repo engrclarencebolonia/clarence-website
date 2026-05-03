@@ -108,7 +108,7 @@ export interface Project {
   image?: string;
   mockupImage?: string;
   overview: string;
-  comapny?: string;
+  client?: string;
   role?: string;
   duration?: string;
   problem: string;
