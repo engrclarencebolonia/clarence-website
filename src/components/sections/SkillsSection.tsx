@@ -32,7 +32,7 @@ const categoryMeta: Record<string, { emoji: string; accent: string; tagBase: str
   },
 };
 
-function SkillTag({ label, meta }: { label: string; meta: ReturnType<typeof Object.values<typeof categoryMeta>[number]> }) {
+function SkillTag({ label, meta }: { label: string; meta: { emoji: string; accent: string; tagBase: string; tagStar: string } }) {
   const isStar = label.startsWith("⭐") || label.startsWith("🔥");
   const display = label.replace(/^[⭐🔥]\s?/, "");
   return (
