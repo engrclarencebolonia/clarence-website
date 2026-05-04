@@ -171,6 +171,10 @@ export function ProjectDetail({ project }: Props) {
                   ))}
                 </ul>
               )}
+              {/* 👇 This is the important part */}
+{project.additional && (
+      <p className="text-base text-slate-700 dark:text-slate-300 leading-relaxed mb-4 space-y-2 mt-3">{project.additional}</p>
+)}
             </div>
           </section>
         </Reveal>
@@ -205,11 +209,36 @@ export function ProjectDetail({ project }: Props) {
 
         {/* Solution */}
         <Reveal>
+      
+
           <section className="mb-14" aria-labelledby="solution-heading">
-            <SectionLabel number="04" label="The Solution" color="green" />
-            <p className="text-base text-slate-700 dark:text-slate-300 leading-relaxed mb-6">{project.solution}</p>
+         <SectionLabel number="04" label="The Solution" color="green" />
+            <div className="p-6 rounded-2xl bg-red-50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/30">
+                    <p className="text-base text-slate-700 dark:text-slate-300 leading-relaxed mb-6">{project.solutionIntro}</p>
+
+{project.solutionItems && (
+  <ul className="space-y-2 mt-3">
+    {project.solutionItems.map((item, i) => (
+      <li
+        key={i}
+        className="flex items-start gap-2 text-sm text-slate-700 dark:text-slate-300"
+      >
+        <span className="mt-1 w-1.5 h-1.5 rounded-full bg-emerald-400 flex-shrink-0" />
+        
+        <span>
+          <strong className="text-slate-900 dark:text-white ">
+            {item.title}
+          </strong>{" "}
+          — {item.description}
+        </span>
+      </li>
+    ))}
+  </ul>
+)}
+            </div>
+
             <div>
-              <p className="text-xs text-slate-400 dark:text-slate-600 uppercase tracking-widest mb-3 font-semibold">Tools Used</p>
+              <p className="text-xs text-slate-400 dark:text-slate-600 uppercase tracking-widest mb-3 font-semibold space-y-2 mt-5">Tools Used</p>
               <div className="flex flex-wrap gap-2">
                 {project.tools.map((tool) => (
                   <span key={tool} className="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">

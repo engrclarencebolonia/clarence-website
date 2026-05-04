@@ -113,8 +113,13 @@ export interface Project {
   duration?: string;
   problem: string;
   problemBullets?: string[];
+  additional?: string;
   process: string[];
-  solution: string;
+  solutionIntro?: string;
+  solutionItems?: {
+  title: string;
+  description: string;
+}[];
   outcome: string;
   outcomes: { metric: string; value: string; description: string }[];
   impactCards?: string[];
@@ -158,7 +163,7 @@ export const projects: Project[] = [
       "Validation & Optimization — Collaborated with stakeholders and developers to validate solutions and ensure alignment with business and technical constraints.",
       "Launch & Iteration — Continuously refined the product based on usage patterns, feedback, and evolving operational needs.",
     ],
-    solution:
+    solutionIntro:
       "Rather than focusing solely on UI improvements or gamification, I redefined the approach to address the core system issues identified during discovery. The solution focused on Data Consolidation & Standardization, Workflow Alignment, Structured Data Presentation surfacing key metrics first with clear drill-down paths, and Gamification with Purpose — integrating engagement elements without compromising clarity.",
     outcome:
       "The redesigned system improved clarity and trust in performance data, reduced cognitive load, and enabled teams to make faster, more informed decisions. By aligning data, workflows, and interface design, the platform evolved from a fragmented reporting tool into a scalable, decision-support system.",
@@ -190,7 +195,7 @@ export const projects: Project[] = [
     coverGradient: "from-red-700 via-red-800 to-slate-900",
     image: "/images/project-ml-wallet.png",
     overview:
-      "Led the end-to-end redesign of ML Wallet, a fintech mobile application used for payments, remittances, and daily financial transactions through M Lhuillier's nationwide network. Focused on reducing friction in financial workflows, improving clarity in transactions, and creating a more intuitive and reliable user experience.",
+      "Redesigned ML Wallet to simplify high-frequency financial transactions, reducing friction and improving clarity in critical user flows.",
     client: "M Lhuillier",
     role: "Research Staff — UI/UX Focus",
     duration: "5 months",
@@ -202,15 +207,36 @@ export const projects: Project[] = [
       "High cognitive load during transactions",
       "Inconsistent structure in financial workflows",
     ],
+    additional:   "These issues slowed down transactions and increased the risk of user error in high-stakes financial actions.",
+  
     process: [
-      "Workflow Analysis — Analyzed end-to-end financial transaction flows and identified friction points in OTP, navigation, and multi-step processes",
-      "Structuring the Experience — Reorganized navigation and information hierarchy to prioritize high-frequency actions and improve clarity during transactions.",
-      "Interaction & Interface Design — Designed intuitive, consistent interfaces focused on reducing cognitive load and improving usability in critical financial actions",
-      "Validation & Optimization — Collaborated with stakeholders and developers to ensure flows are clear, feasible, and aligned with system constraints",
-      "Launch & Iteration — Refined designs based on feedback and improved flows to enhance speed, accuracy, and user confidence",
+      "Workflow & Data Analysis — Identified friction across OTP, navigation, and multi-step flows that slowed transactions and increased user error risk",
+      "Structuring the Experience — Reorganized navigation and information hierarchy to prioritize high-frequency actions and reduce decision friction",
+      "Interaction & Interface Design — Translated complex financial flows into clear, accessible interfaces using consistent patterns and reduced-step interactions",
+      "Validation & Optimization — Iterated on flows through stakeholder feedback and feasibility checks, ensuring clarity, usability, and technical alignment",
+      "Launch & Iteration — Continuously refined flows post-validation to improve transaction speed, reduce errors, and increase user confidence",
     ],
-    solution:
-      "Redesigned the application with a focus on clarity, efficiency, and trust across core financial workflows. Key improvements: Streamlined Transaction Flows, reducing multi-step processes, Improved Navigation Structure, reorganizing features for faster access to high-frequency actions, Clearer Information Hierarchy, prioritizing critical data during transactions, and a Consistent Design System, standardizing components for better usability and scalability.",
+    solutionIntro:
+  "Redesigned the application to improve clarity, efficiency, and trust across core financial workflows.",
+
+solutionItems: [
+  {
+    title: "Streamlined Transaction Flows",
+    description: "Reduced multi-step processes",
+  },
+  {
+    title: "Improved Navigation Structure",
+    description: "Reorganized features for faster access to high-frequency actions",
+  },
+  {
+    title: "Clear Information Hierarchy",
+    description: "Prioritized critical data during transactions",
+  },
+  {
+    title: "Consistent Design System",
+    description: "Standardized components for usability and scalability",
+  },
+],
     outcome:
       "The goal was to make financial actions faster, clearer, and more reliable — reducing risk of user error in high-stakes financial moments.",
     impactCards: [
@@ -252,7 +278,7 @@ export const projects: Project[] = [
       "Implemented in Java (Android) with Firebase Realtime Database for live sync",
       "Iterated through 3 prototype rounds, focusing on gesture clarity and state feedback",
     ],
-    solution:
+    solutionIntro:
       "A native Android Kanban app with real-time board sync, intuitive drag-and-drop ticket management, team invite flows, and a focused notification system. Designed with Android Material guidelines while maintaining a distinct visual identity.",
     outcome:
       "Published on Google Play. Demonstrates end-to-end product ownership — from UX research through design system to shipped Android code.",
@@ -291,7 +317,7 @@ export const projects: Project[] = [
       "Built with Firebase Auth (Google Sign-In), Realtime DB, Firestore, Storage, and Analytics",
       "Shipped 5 production releases (versionCode 5) with iterative improvements",
     ],
-    solution:
+    solutionIntro:
       "A beautifully calm dark-mode Android journal app with frictionless entry creation, media attachment support, dream tagging, and a Google-authenticated sync — so your journal follows you across devices.",
     outcome:
       "Published and actively maintained on Google Play with 5 versioned releases. Demonstrates end-to-end consumer app product ownership.",
@@ -331,7 +357,7 @@ export const projects: Project[] = [
       "Integrated Google Maps for restaurant geolocation and delivery radius visualization",
       "Built in-app chat for order updates and restaurant communication",
     ],
-    solution:
+    solutionIntro:
       "A multi-mode food ordering app with map-based restaurant discovery, tabbed ordering (Delivery/Dine-In/Pickup), an animated cart, transparent checkout flow, and real-time order chat — all in a warm, premium visual style.",
     outcome:
       "Shipped as a complete release APK with full design-to-development ownership. Demonstrates the ability to design and build complex multi-flow consumer commerce apps.",
