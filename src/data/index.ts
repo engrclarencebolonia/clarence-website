@@ -336,4 +336,58 @@ export const projects: Project[] = [
     ],
     tools: ["Figma", "Java", "Android Studio", "Firebase", "Google Maps API", "Picasso"],
   },
+  {
+    id: "agap",
+    title: "AGAP",
+    subtitle: "Active Geographical Assistance Protocol — Emergency Response App",
+    type: "Public Safety · Android App",
+    year: "2020–2021",
+    status: "Completed",
+    tags: ["Mobile Apps", "Additional Works"],
+    color: "#2d7a3a",
+    accentColor: "#4caf50",
+    textColor: "#ffffff",
+    emoji: "🚨",
+    coverGradient: "from-green-700 via-green-900 to-slate-950",
+    image: "/images/agap-screen-2.png",
+    mockupImage: "/images/agap-screen-4.png",
+    overview:
+      "AGAP (Active Geographical Assistance Protocol) is an Android emergency response mobile app developed for Parañaque City, Philippines. It gives citizens a direct, GPS-enabled line to Police, Fire, Hospital, and Disaster departments — reducing reliance on overloaded 911 hotlines and improving response accuracy through real-time location sharing, photo reporting, and direct department calls.",
+    client: "Polytechnic University of the Philippines — Parañaque Campus",
+    role: "Project Manager · Mobile App Developer · UI/UX Design Lead",
+    duration: "6 months (2020–2021)",
+    problem:
+      "The 911 emergency system in Parañaque City was overloaded — 94–98% of calls were non-emergency, and GPS fix accuracy for caller location ranged from only 10–95%. Citizens had no direct channel to specific departments, and responders had no way to receive visual context or precise coordinates from the field.",
+    problemBullets: [
+      "No direct citizen-to-department communication channel",
+      "GPS location accuracy gaps in the existing 911 system",
+      "Overloaded call centers with mostly non-emergency traffic",
+      "Responders lacked visual context before arriving on scene",
+      "No privacy-safe crime reporting mechanism for witnesses",
+    ],
+    process: [
+      "Problem Analysis — Surveyed residents, emergency personnel, and IT specialists across Parañaque City departments to identify friction points in existing emergency workflows",
+      "System Design — Architected a 3-role system: Ordinary User, Responder, and Administrator — each with distinct activity flows mapped through DFD and ERD",
+      "UI/UX Design — Designed full wireframes and interactive screens in Adobe XD, covering Login, User Activity, Department Selection, Pin Location, Call, and Report flows",
+      "Mobile App Development — Built in Java (Android Studio) with Firebase Realtime Database, Firebase Auth, Firebase Storage, Google Maps API, and FCM push notifications",
+      "Hardware Integration — Integrated with existing IP camera infrastructure as a CCTV alternative, demonstrating cross-device interoperability within department networks",
+      "Testing & Evaluation — Conducted 8 rounds of functionality testing, reaching 90% response and video accuracy in the final round; evaluated by residents, emergency personnel, and IT specialists",
+    ],
+    solution:
+      "A mobile-first emergency response app with three distinct modes: Pin Location (geotagged photo + map coordinate sent to chosen department), Call for Response (direct department call), and Report Incident (private, evidenced complaint form). Departments — Police, Fire, Hospital, Disaster — each have dedicated responder dashboards. The app integrates with existing IP camera feeds for situation assessment before dispatch.",
+    outcome:
+      "Received Strongly Agree ratings across all evaluation categories — Functionality (4.76), Reliability (4.66), Usability (4.69), Efficiency (4.63), and Data Privacy & Security (4.59) — from residents, emergency personnel, and IT specialists. Recommended for implementation by the evaluation panel. Published on Google Play.",
+    impactCards: [
+      "Reduced reliance on overloaded 911 hotlines through direct department routing",
+      "Improved location accuracy with GPS pin + photo geotagging combination",
+      "Enabled privacy-safe incident reporting for crime witnesses",
+    ],
+    outcomes: [
+      { metric: "Functionality Score", value: "4.76", description: "Overall weighted mean — Strongly Agree" },
+      { metric: "Testing Rounds", value: "8", description: "Iterated from 50% → 90% accuracy" },
+      { metric: "Final Accuracy", value: "90%", description: "Response and video accuracy at final test" },
+      { metric: "Departments", value: "4", description: "Police, Fire, Hospital, Disaster" },
+    ],
+    tools: ["Adobe XD", "Java", "Android Studio", "Firebase", "Google Maps API", "Retrofit2", "Picasso", "FCM"],
+  },
 ];
