@@ -19,38 +19,6 @@ const statusColors: Record<string, string> = {
   "In Progress": "bg-amber-100 text-amber-800 border-amber-300",
 };
 
-// FlavorBuddy Mobbin-style scroll showcase component
-function FlavorBuddyShowcase({ project }: { project: Project }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
-  const x1 = useTransform(scrollYProgress, [0, 1], ["0%", "-20%"]);
-  const x2 = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
-
-  return (
-    <div ref={ref} className="my-10 overflow-hidden rounded-2xl bg-slate-950 py-10">
-      <p className="text-center text-xs font-semibold uppercase tracking-widest text-slate-400 mb-8">
-        App Screens
-      </p>
-      {/* Row 1 — scrolls left on scroll */}
-      <motion.div style={{ x: x1 }} className="flex gap-4 mb-4 px-6">
-        {[project.image, project.mockupImage, project.image, project.mockupImage].filter(Boolean).map((src, i) => (
-          <div key={i} className="flex-shrink-0 w-48 h-96 rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-            <Image src={img(src!)} alt={`${project.title} screen ${i+1}`} width={192} height={384} className="w-full h-full object-cover object-top" />
-          </div>
-        ))}
-      </motion.div>
-      {/* Row 2 — scrolls right on scroll */}
-      <motion.div style={{ x: x2 }} className="flex gap-4 px-6">
-        {[project.mockupImage, project.image, project.mockupImage, project.image].filter(Boolean).map((src, i) => (
-          <div key={i} className="flex-shrink-0 w-48 h-96 rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-            <Image src={img(src!)} alt={`${project.title} screen ${i+5}`} width={192} height={384} className="w-full h-full object-cover object-center" />
-          </div>
-        ))}
-      </motion.div>
-    </div>
-  );
-}
-
 export function ProjectDetail({ project }: Props) {
   const currentIndex = projects.findIndex((p) => p.id === project.id);
   const nextProject = projects[(currentIndex + 1) % projects.length];
@@ -62,9 +30,9 @@ export function ProjectDetail({ project }: Props) {
     <article className="min-h-screen pt-20">
       {/* ── Hero ── */}
       <div className={cn("relative py-24 sm:py-32 overflow-hidden bg-gradient-to-br", project.coverGradient)}>
-        {project.image && (
+        {project.heroImage && (
           <div className="absolute inset-0" aria-hidden>
-            <Image src={img(project.image!)} alt="" fill className="object-cover object-top opacity-20" priority />
+            <Image src={img(project.heroImage!)} alt="" fill className="object-cover object-top opacity-80" priority />
           </div>
         )}
         <div className="absolute inset-0 pointer-events-none" aria-hidden>
@@ -116,15 +84,7 @@ export function ProjectDetail({ project }: Props) {
             )}
           </motion.div>
 
-          {/* Outcome metrics */}
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3">
-            {project.outcomes.map((o) => (
-              <div key={o.metric} className="p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/15">
-                <p className="text-2xl font-display font-bold text-white leading-none mb-1">{o.value}</p>
-                <p className="text-xs text-white/60">{o.metric}</p>
-              </div>
-            ))}
-          </motion.div>
+        
         </div>
       </div>
 
@@ -141,17 +101,7 @@ export function ProjectDetail({ project }: Props) {
 
         <Divider />
 
-        {/* Hero project image */}
-        {project.image && !isFlavorBuddy && (
-          <Reveal className="mb-14">
-            <div className="relative w-full rounded-2xl overflow-hidden border border-slate-200 dark:border-white/5 shadow-xl">
-              <Image src={img(project.image!)} alt={`${project.title} interface`} width={1200} height={675} className="w-full h-auto object-cover" />
-            </div>
-          </Reveal>
-        )}
 
-        {/* FlavorBuddy: Mobbin-style scroll showcase */}
-        {isFlavorBuddy && <FlavorBuddyShowcase project={project} />}
 
         {/* The Problem */}
         <Reveal>
@@ -223,7 +173,7 @@ export function ProjectDetail({ project }: Props) {
         {isBPO && (
           <Reveal className="mb-14">
             <div className="relative w-full rounded-2xl overflow-hidden border border-slate-200 dark:border-white/5 shadow-xl">
-              <Image src={img("/images/b2b-bpo-case-study.png")} alt="B2B BPO Platform design system" width={1200} height={800} className="w-full h-auto object-cover" />
+              <Image src={img("/images/sherpacx.png")} alt="B2B BPO Platform design system" width={1200} height={800} className="w-full h-auto object-cover" />
             </div>
           </Reveal>
         )}
@@ -232,11 +182,31 @@ export function ProjectDetail({ project }: Props) {
         {project.id === "ml-wallet" && (
           <Reveal className="mb-14">
             <div className="relative w-full rounded-2xl overflow-hidden border border-slate-200 dark:border-white/5 shadow-xl">
-              <Image src={img("/images/ml-wallet-case-study.png")} alt="ML Wallet case study screens" width={1200} height={800} className="w-full h-auto object-cover" />
+              <Image src={img("/images/ml_wallet.png")} alt="ML Wallet case study screens" width={1200} height={800} className="w-full h-auto object-cover" />
             </div>
           </Reveal>
         )}
 
+
+
+  {/* AGAP: show the case study screenshot */}
+        {project.id === "agap" && (
+          <Reveal className="mb-14">
+            <div className="relative w-full rounded-2xl overflow-hidden border border-slate-200 dark:border-white/5 shadow-xl">
+              <Image src={img("/images/agap_screens.png")} alt="agap screens" width={1200} height={800} className="w-full h-auto object-cover" />
+            </div>
+          </Reveal>
+        )}
+
+
+         {/* AGAP: show the case study screenshot */}
+        {project.id === "flavour-buddy" && (
+          <Reveal className="mb-14">
+            <div className="relative w-full rounded-2xl overflow-hidden border border-slate-200 dark:border-white/5 shadow-xl">
+              <Image src={img("/images/flavor_frame.png")} alt="flavour-buddy screens" width={1200} height={800} className="w-full h-auto object-cover" />
+            </div>
+          </Reveal>
+        )}
         <Divider />
 
         {/* Outcomes */}

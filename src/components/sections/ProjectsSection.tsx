@@ -36,14 +36,14 @@ export function ProjectsSection() {
               </h2>
             </div>
             <p className="text-sm text-slate-500 dark:text-slate-400 max-w-xs sm:text-right">
-              {projects.length} projects across Fintech, SaaS, and Mobile
+              {projects.length} projects across Fintech, SaaS, and Other Works
             </p>
           </div>
         </Reveal>
 
         <Reveal delay={0.1} className="mb-10">
           <div className="flex flex-wrap gap-2" role="group" aria-label="Filter projects by tag">
-            {["All", "Product Design", "Mobile Design", "Design System", "Fintech", "B2B SaaS"].map((tag) => (
+            {['All', 'B2B SaaS', 'Mobile Apps', 'Fintech', 'Design System', 'Other Works'].map((tag) => (
               <button key={tag} onClick={() => setActiveTag(tag)} aria-pressed={activeTag === tag}
                 className={cn(
                   "px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 border",
@@ -70,10 +70,10 @@ export function ProjectsSection() {
                 )} aria-label={`${project.title} — ${project.subtitle}`}>
 
                   {/* Cover */}
-                  <div className={cn("relative h-52 overflow-hidden", !project.image && `bg-gradient-to-br ${project.coverGradient}`)}>
-                    {project.image
+                  <div className={cn("relative h-52 overflow-hidden", !project.cardImage && `bg-gradient-to-br ${project.coverGradient}`)}>
+                    {project.cardImage
                       ? <>
-                          <Image src={img(project.image!)} alt={`${project.title} screenshot`} fill className="object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+                          <Image src={img(project.cardImage!)} alt={`${project.title} screenshot`} fill className="object-cover object-top group-hover:scale-105 transition-transform duration-500" />
                           {/* WCAG-safe overlay: dark gradient ensures text is always readable */}
                           <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent" />
                         </>
@@ -90,14 +90,19 @@ export function ProjectsSection() {
                       </div>
                     )}
 
-                    <div className="absolute top-4 right-5 text-2xl drop-shadow-lg" aria-hidden>{project.emoji}</div>
+                    {/* <div className="absolute top-4 right-5 text-2xl drop-shadow-lg" aria-hidden>{project.emoji}</div> */}
 
                     {/* Title always on dark overlay — guaranteed WCAG AA */}
                     <div className="absolute bottom-0 left-0 right-0 p-5 flex items-end justify-between">
-                      <div>
-                        <p className="text-white/70 text-xs font-medium mb-0.5">{project.type}</p>
-                        <h3 className="font-display font-bold text-white text-xl leading-tight">{project.title}</h3>
-                      </div>
+                      <div className="px-3 py-2 rounded-xl bg-white/5 backdrop-blur-md border border-white/25">
+  <p className="text-white/70 text-xs font-medium mb-0.5">
+    {project.type}
+  </p>
+
+  <h3 className="font-display font-bold text-white text-xl leading-tight">
+    {project.title}
+  </h3>
+</div>
                       <motion.div className="w-9 h-9 rounded-xl bg-white/15 backdrop-blur-sm border border-white/25 flex items-center justify-center text-white flex-shrink-0 group-hover:bg-white/25 transition-colors" aria-hidden>
                         <ArrowUpRight size={16} />
                       </motion.div>

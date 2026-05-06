@@ -118,9 +118,7 @@ export function AboutSection() {
                   variants={staggerItem}
                   className="p-5 rounded-2xl bg-white dark:bg-surface-850 border border-slate-100 dark:border-white/5 hover:border-brand-200 dark:hover:border-brand-800/50 shadow-card dark:shadow-none transition-all duration-200 hover:-translate-y-0.5 group"
                 >
-                  <div className="text-2xl mb-3" aria-hidden>
-                    {point.icon}
-                  </div>
+                 
                   <h3 className="text-sm font-semibold text-slate-900 dark:text-white mb-1.5 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
                     {point.title}
                   </h3>
@@ -131,21 +129,7 @@ export function AboutSection() {
               ))}
             </StaggerChildren>
 
-            {/* Stats */}
-            <Reveal delay={0.25} className="mt-5 mb-2">
-            <div className="relative h-56 w-full rounded-2xl overflow-hidden border border-slate-100 dark:border-white/5 shadow-card">
-              <Image
-                src={img("/images/about-photo.jpg")}
-                alt="Clarence at work"
-                fill
-                className="object-cover object-center"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-              <div className="absolute bottom-3 left-3 text-white text-xs font-medium bg-black/30 backdrop-blur-sm px-2.5 py-1 rounded-lg">
-                Bacoor, Cavite, Philippines
-              </div>
-            </div>
-          </Reveal>
+        
 
           <Reveal delay={0.3} className="mt-6">
               <div className="p-5 rounded-2xl bg-gradient-to-br from-brand-50 to-brand-100/50 dark:from-brand-950/30 dark:to-brand-900/20 border border-brand-100 dark:border-brand-800/30">
@@ -153,7 +137,7 @@ export function AboutSection() {
                   {[
                     { val: "5", lab: "Years" },
                     { val: "30+", lab: "Projects" },
-                    { val: "3", lab: "Design Systems" },
+                    { val: "50+", lab: "Product Discoveries" },
                   ].map(({ val, lab }) => (
                     <div key={lab} className="text-center">
                       <p className="text-2xl font-display font-bold text-brand-600 dark:text-brand-400">

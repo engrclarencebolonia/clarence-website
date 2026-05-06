@@ -164,7 +164,7 @@ From his own copy and corrections:
 - **Duration:** 1.6 years (2024–2026)
 - **Tools:** Figma, FigJam, Photoshop, Illustrator, Rive, Jira, Confluence, Gemini AI, ChatGPT AI, Slack, Loom
 - **Key metrics:** 20+ discoveries, 75% shipped, Beta→2.0, 5→1 system
-- **Status:** In Progress / Completed
+- **Status:**  Completed
 
 ### Project 2: ML Wallet
 - **Client:** M Lhuillier

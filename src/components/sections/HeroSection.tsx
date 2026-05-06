@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowDown, Github, Figma, Mail } from "lucide-react";
+import { ArrowDown, Github, Figma, Mail, Linkedin } from "lucide-react";
 import { personalInfo } from "@/data";
 import { img } from "@/lib/imagePath";
 
@@ -52,7 +52,8 @@ export function HeroSection() {
             <motion.div variants={itemVariants}>
               <h1 className="font-display font-bold leading-tight mb-2">
                 <span className="block text-5xl sm:text-6xl md:text-7xl text-slate-900 dark:text-white">Designing clarity</span>
-                <span className="block text-5xl sm:text-6xl md:text-7xl"><span className="gradient-text">from complexity.</span></span>
+                <span className="block text-5xl sm:text-6xl md:text-7xl">from complexity.</span>
+                {/* <span className="block text-5xl sm:text-6xl md:text-7xl"><span className="gradient-text">from complexity.</span></span> */}
               </h1>
             </motion.div>
 
@@ -86,6 +87,7 @@ export function HeroSection() {
               <div className="flex items-center gap-2">
                 {[
                   { href: personalInfo.github, icon: <Github size={16} />, label: "GitHub" },
+                  { href: personalInfo.linkedin, icon: <Linkedin size={16} />, label: "LinkedIn" },
                   { href: personalInfo.figma, icon: <Figma size={16} />, label: "Figma" },
                   { href: `mailto:${personalInfo.email}`, icon: <Mail size={16} />, label: "Email" },
                 ].map(({ href, icon, label }) => (

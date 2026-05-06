@@ -40,7 +40,7 @@ function SkillTag({ label, meta }: { label: string; meta: { emoji: string; accen
       "px-2.5 py-1 rounded-lg text-xs border transition-colors cursor-default",
       isStar ? meta.tagStar : meta.tagBase
     )}>
-      {isStar && <span className="mr-1 text-[10px]">{label.startsWith("🔥") ? "🔥" : "★"}</span>}
+      {isStar && <span className="mr-1 text-[10px]">{label.startsWith("🔥") ? "🔥" : "⭐"}</span>}
       {display}
     </span>
   );

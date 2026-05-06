@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
-import { Playfair_Display, DM_Sans, DM_Mono } from "next/font/google";
+import { Playfair_Display, DM_Sans, DM_Mono, PT_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ui/ThemeProvider";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 
 const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+});
+4
+const ptSans = PT_Sans({
+  weight: ["400", "700"],
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
@@ -61,7 +68,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${playfair.variable} ${dmSans.variable} ${dmMono.variable} font-body antialiased`}
+        className={`${ptSans.variable} ${dmSans.variable} ${dmMono.variable} font-body antialiased`}
       >
         <ThemeProvider>
           <div className="relative min-h-screen bg-surface-50 dark:bg-surface-900 text-slate-900 dark:text-slate-100 transition-colors duration-300">
