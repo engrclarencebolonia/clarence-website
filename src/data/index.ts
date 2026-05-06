@@ -450,11 +450,13 @@ outcomes: [
     cardImage: "/images/agap_profile.png",
     heroImage: "/images/green_background.png",
     mockupImage: "/images/agap_screens.png",
+    client: "National Disaster Risk and Reduction Management Council (NDRRMC) - Parañaque City, Philippines",
+    role: "Project Manager · Mobile App Developer",
+    duration: "2 years (2019–2021 academic years)",
+
    overview:
   "AGAP (Active Geographical Assistance Protocol) is a mobile-first emergency response platform designed for Parañaque City, Philippines. The system was created to improve emergency accessibility, reduce response friction, and provide citizens with faster and more direct communication channels to Police, Fire, Hospital, and Disaster response departments. The platform combines GPS-assisted emergency reporting, geotagged incident submissions, department-based routing, and real-time communication workflows into a lightweight and scalable Android application.",
 
-    role: "Project Manager · Mobile App Developer",
-    duration: "2 years (2019–2021 academic years)",
     problem:
   "Existing emergency response workflows heavily relied on overloaded hotline systems that often lacked precise caller location data, direct department routing, and visual incident context. Citizens experienced delays in emergency response coordination, while responders had limited situational awareness before arriving on-site. The challenge was to design a more accessible, accurate, and scalable emergency reporting system that could operate efficiently within limited technical and infrastructure constraints.",
     problemBullets: [
